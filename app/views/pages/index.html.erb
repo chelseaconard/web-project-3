@@ -1,0 +1,67 @@
+<% provide(:title,"bootstrap")%> 
+
+<div class ="center jumbotron">
+<%= image_tag "me.jpg", :height=> 120, :width => 95 %>
+<h1>About</h1>
+
+</div>
+<h2 style="margin: 20px 100px 20px 0px;">Reservations</h2>
+<p style="border:3px; border-style:solid; border-color:black; background-color:#F5F0F4; width: 49%; padding: 1em; margin: 0px 0px 0px 150px;">Please type <strong>Yes</strong> if you will attend the meal or type <strong>No</strong> if you are unable to attend. Type <strong>Late Plate</strong> for dinner if you have a work, class, or sport conflict.</p>
+
+<br>
+
+<div class = "About">
+
+<p id="notice"><%= notice %></p>
+
+
+
+  <table style=" background-repeat:no-repeat; width:450px;margin:0;" cellpadding="0" cellspacing="0" border="10">
+  <tr style="height:40px; width:40px; margin:0; color:black; background-color: white;" >
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <h2 style="margin: 5px 500px 5px 5px;">Monday to Friday</h2>
+    <% @meals.each do |meal| %>
+      <tr>
+        <td><%= meal.breakfast %></td>
+        <td><%= meal.lunch %></td>
+        <td><%= meal.dinner %></td>
+        <td><%= link_to 'Show', meal %></td>
+        <td><%= link_to 'Edit', edit_meal_path(meal) %></td>
+        <td><%= link_to 'Destroy', meal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+ <table style=" background-repeat:no-repeat; width:450px;margin:0;" cellpadding="0" cellspacing="0" border="10">
+  <tr style="height:40px; width:40px; margin:0; color:black; background-color: white;" >
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+ 
+<br>
+
+<%= link_to 'New Meal', new_meal_path %>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head> <title><%= yield(:title) %> </title>
+<%= csrf_meta_tags %>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<% provide(:title,"bootstrap")%> 
+
+<div class ="center jumbotron">
+<div class ="picture">
+<%= image_tag "me.jpg", :height=> 120, :width => 95 %>
+</div>
+<h1>Chelsea Conard's Homepage</h1>
+</div>
+
+</head>
+  <body>
+    <!--<%= yield %> -->
+    <header class="navbar navbar-fixed-top navbar-inverse"> 
+        
+  </header>
+  
+  <!--do we need this?
+  <div class="container">
+      <br /><br /> <br /><br /> <br /><br >
+      <!--<% flash.each do |message_type, message| %> 
+	        <div class= "alert alert-<%= message_type %>"><%=message %></div>
+	    <% end %>
+	    <%flash.clear%> -->
+
+  
+  <div class="links">
+  
+<ul id = "navlinks">
+           <li><%= link_to "Home",  :controller => "controller1", :action => "home" %></li>
+           <li><%= link_to "About",  :controller => "tabs", :action => "about" %></li>
+           <li><%= link_to "Research", :controller => "tabs", :action => "research" %></li>
+          
+</ul>
+
+</div>
+
+  <div class="container">
+    
+      <%= yield %>
+    <footer class="footer">
+        <nav>
+          <hr>
+        <ul class= "navbar navbar-fixed-bottom navbar-inverse">
+          <div class="container">
+          <p>Chelsea Conard | chelseaconard_2018 [at] depauw.edu </p>
+          <div class="contact">
+          <p><%= link_to 'Contact', form_path %></p>
+          </div>
+        </ul>
+      </nav> 
+    </div>
+  </footer>
+  </div>
+  </body>
+</html>

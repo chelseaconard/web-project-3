@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  restriction: MyString
+  email: MyString
+  eligibility: MyString
+
+two:
+  name: MyString
+  restriction: MyString
+  email: MyString
+  eligibility: MyString

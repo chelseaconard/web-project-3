@@ -1,0 +1,26 @@
+<% provide(:title,"bootstrap")%> 
+
+<div class="center jumbotron">
+<h1>Account Information</h1>
+</div>
+
+<h2>Scheduled Reservations</h2>
+
+<table style=" background-repeat:no-repeat; width:450px;margin:0;" cellpadding="0" cellspacing="0" border="10">
+ <tr style="height:40px; width:40px; margin:0; color:black; background-color: white;" >
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+ </tr>
+<% if @accounts %>
+<% for e in @accounts do %>
+<tr>
+    <td><%= e.breakfast %></td>
+    <td><%= e.lunch %></td>
+    <td><%= e.dinner %></td>
+    <% end %>
+    <% end %>
+</tr>
+</table>
+
+
