@@ -1,0 +1,15 @@
+<h2>Calendar</h2>
+<p style="border: 1px solid black; width: 70%; background-color:white; padding: 5px; margin: 0px 0px 0px 15px;">The calendar below corresponds with my events for second semester.</p>
+    <br>
+<br>
+<div class="calendarlength">
+<%= month_calendar(attribute: :start_date, end_attribute: :end_date)  do |day| %>
+  <%= day.strftime("%d") %>
+<% end %>
+</div>
+
+
+
+<br>
+<br>
+<br>

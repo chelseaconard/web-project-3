@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117211652) do
+ActiveRecord::Schema.define(version: 20171208214402) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 20171117211652) do
     t.string "dinner"
   end
 
+  create_table "articles", force: :cascade do |t|
+    t.string "name"
+    t.text "feedback"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "conferences", force: :cascade do |t|
+    t.string "wicys"
+    t.datetime "start_time"
+    t.date "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "meals", force: :cascade do |t|
     t.string "breakfast"
     t.string "lunch"
@@ -31,6 +46,20 @@ ActiveRecord::Schema.define(version: 20171117211652) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "day"
+  end
+
+  create_table "recommendations", force: :cascade do |t|
+    t.string "topic"
+    t.string "idea"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recommends", force: :cascade do |t|
+    t.string "topic"
+    t.string "idea"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

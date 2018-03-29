@@ -1,0 +1,32 @@
+<%= form_with(model: conference, local: true) do |form| %>
+  <% if conference.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(conference.errors.count, "error") %> prohibited this conference from being saved:</h2>
+
+      <ul>
+      <% conference.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :wicys, id: :conference_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_time %>
+    <%= form.datetime_select :start_time, id: :conference_start_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_time %>
+    <%= form.date_select :end_time, id: :conference_end_time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

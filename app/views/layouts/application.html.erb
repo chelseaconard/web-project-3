@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head> <title><%= yield(:title) %> </title>
-<%= csrf_meta_tags %>
-<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 <% provide(:title,"bootstrap")%> 
 
 <div class ="center jumbotron">
 <div class ="picture">
-<%= image_tag "me.jpg", :height=> 120, :width => 95 %>
+<%= image_tag "me.jpg", :height=> 125, :width => 85 %>
 </div>
-<h1>Chelsea Conard's Homepage</h1>
+<h1>Chelsea Conard's Webpage</h1>
 </div>
+</head>
 
 </head>
   <body>
@@ -35,7 +36,10 @@
 <ul id = "navlinks">
            <li><%= link_to "Home",  :controller => "controller1", :action => "home" %></li>
            <li><%= link_to "About",  :controller => "tabs", :action => "about" %></li>
-           <li><%= link_to "Research", :controller => "tabs", :action => "research" %></li>
+           <li><%= link_to "Research", :controller => "recommendations", :action => "index" %></li>
+           <li><%= link_to "News", :controller => "articles", :action => "index" %></li>
+           <li><%= link_to "Calendar", :controller => "conferences", :action => "index" %></li>
+           <li><%= link_to 'Contact', form_path %></li>
           
 </ul>
 
@@ -48,8 +52,8 @@
         <nav>
           <hr>
         <ul class= "navbar navbar-fixed-bottom navbar-inverse">
-          <div class="container">
-          <p>Chelsea Conard | chelseaconard_2018 [at] depauw.edu </p>
+          <div class="container2">
+          <p>(765) 891-0303 | chelseaconard_2018 [at] depauw.edu </p>
           <div class="contact">
           <p><%= link_to 'Contact', form_path %></p>
           </div>

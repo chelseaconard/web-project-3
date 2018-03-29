@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+
+<h2>Past Research</h2>
+
+    <p style="border: 1px solid black; width: 21%; background-color:white; padding: 5px; margin: 0px 0px 0px 15px;">Click on the Link to Learn More.</p>
+<br>
+<table>
+    
+    <tr>
+        <th>Year</th>
+        <th>Research Project</th>
+    </tr>
+        <td><p>2015</p></td>
+        <td><p><a href="https://sites.google.com/a/depauw.edu/european-parliament-intern/">EPP Parliament Winter Term site</a></p></td>
+    </tr>
+    </tr>
+        <td><p>2015</p></td>
+        <td><p><%= link_to "Cybersecurity in the Private Sector (Geneva, Switzerland)", asset_path("Conard, 2015.pdf") %></p></td>
+    </tr>
+    </tr>
+        <td><p>2017</p></td>
+        <td><p><%= link_to "The Shanghainese Millennial's View on Data Privacy", asset_path("Capstone.pdf") %></p></td>
+    </tr>
+    
+    
+</table>
+
+
+<h2>Research Recommendations</h2>
+ <p style="border: 1px solid black; width: 31%; background-color:white; padding: 5px; margin: 0px 0px 0px 15px;">Provide your Research Recommendations Below.</p>
+<br>
+<table width="95%">
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Idea</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recommendations.each do |recommendation| %>
+      <tr>
+        <td><%= recommendation.topic %></td>
+        <td><%= recommendation.idea %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<strong><p style="border: 1px solid black; width: 24%; background-color:#D3D0CE; padding: 5px; margin: 0px 0px 0px 15px;"><%= link_to 'Click to Add New Recommendation', new_recommendation_path %></p></strong>
+
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+<div class= "left2">
+<h2>Calendar</h2>
+<p style="border: 1px solid black; width: 66%; background-color:white; padding: 5px; margin: 0px 0px 0px 15px;">See Calendar Below to Coordinate Dates.</p>
+    <br>
+<br>
+<div class="calendarlength">
+<%= month_calendar(attribute: :start_date, end_attribute: :end_date)  do |day| %>
+  <%= day.strftime("%d") %>
+<% end %>
+</div>
+<br>
+<br>
+<br>
+
+</div>
+
+<div class= "right2">
+<h2>Upcoming Events</h2>
+
+<p style="border: 1px solid black; width: 55%; background-color:white; padding: 5px; margin: 0px 0px 0px 15px;">View Events Below. Click Link to Add Events.</p>
+<br>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Start time</th>
+      <th>End time</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conferences.each do |conference| %>
+      <tr>
+        <td><%= conference.wicys %></td>
+        <td><%= conference.start_time %></td>
+        <td><%= conference.end_time %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<p style="border: 1px solid black; width: 38%; background-color:#D3D0CE; padding: 5px; margin: 0px 0px 0px 15px;"><%= link_to 'Click Here to Add a New Event', new_conference_path %></p>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+

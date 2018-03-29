@@ -1,0 +1,100 @@
+<p id="notice"><%= notice %></p>
+<div class="left">
+<h2>Former Personal News</h2>
+    <p style="border: 1px solid black; width: 79%; background-color:white; padding: 5px; margin: 0px 0px 0px 15px;">Click on the Link to Learn More.</p>
+    <br>
+<table>
+    
+    <tr>
+        <th>Year</th>
+        <th>News Story</th>
+    </tr>
+    </tr>
+        <td><p>2015</p></td>
+        <td><p><a href="http://depauwtigers.com/sports/wsoc/2014-15/bios/conard_chelsea_jznm">DePauw Soccer</a></p></td>
+    </tr>
+        <td><p>2016</p></td>
+        <td><p><a href="https://siliconangle.com/blog/2016/10/21/cs-x-industry-it-could-this-mixed-major-movement-solve-industry-tech-equation-ghc16/">Grace Hopper Conference Interview</a></p></td>
+    </tr>
+    </tr>
+        <td><p>2016</p></td>
+        <td><p><a href="https://www.depauw.edu/news-media/latest-news/details/32345/">Awarded Boren Award</a></p></td>
+    </tr>
+    </tr>
+        <td><p>2016</p></td>
+        <td><p><a href="https://medium.com/@ReigningIt/women-who-reign-chelsea-conard-5543656caefb">Women Reign Feature</a></p></td>
+    </tr>
+    </tr>
+        <td><p>2017</p></td>
+        <td><p><a href="https://www.depauw.edu/about/president/presidential-ambassadors/">Presidential Ambassador</a></p></td>
+    </tr>
+
+</table>
+</div>
+<div class= "right">
+   <h2>Interesting News Articles</h2>
+   <p style="border: 1px solid black; width: 33%; background-color:white; padding: 5px; margin: 0px 0px 0px 15px;">Click on the Link to Learn More.</p>
+   <br>
+    <table>
+    
+    <tr>
+        <th>Topic</th>
+        <th>Article</th>
+    </tr>
+    </tr>
+        <td><p>Blockchain</p></td>
+        <td><p><a href="https://www.cryptocoinsnews.com/plantoid-a-bitcoin-eating-robot-merges-the-natural-world-with-blockchain-technology/">Plantoid: A Bitcoin Eating Robot</a></p></td>
+    </tr>
+        <td><p>Filecoin</p></td>
+        <td><p><a href="https://filecoin.io/">A Decentralized Storage Network, Turning Cloud Storage into an Algorithmic Market</a></p></td>
+    </tr>
+    </tr>
+        <td><p>Artificial Intelligence</p></td>
+        <td><p><a href="http://mitibmwatsonailab.mit.edu/">MIT-IBM Watson Lab for the Future of AI Ethics</a></p></td>
+    </tr>
+    </tr>
+        <td><p>Russian Cryptocurrency</p></td>
+        <td><p><a href="https://cointelegraph.com/news/breaking-russia-issuing-cryptoruble">State Issued Cryptocurrency: "CryptoRuble"</a></p></td>
+    </tr>
+    </tr>
+        <td><p>Tesla Semi</p></td>
+        <td><p><a href="https://electrek.co/2017/12/08/tesla-semi-order-electric-trucks-sysco/">Tesla Receives Large Order of 50 Semi Trucks</a></p></td>
+    </tr>
+</table>
+</div>
+<div class= "bottom">
+<br>
+<h2>Feedback on News Articles</h2>
+<p style="border: 1px solid black; width: 29%; background-color:white; padding: 5px; margin: 0px 0px 0px 15px;">Provide your Feedback on News Articles Below.</p></center>
+<br>
+
+<table width="96.5%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Feedback</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.name %></td>
+        <td><%= article.feedback %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<strong><p style="border: 1px solid black; width: 27%; background-color:#D3D0CE; padding: 5px; margin: 0px 0px 0px 15px;"><%= link_to 'Click to Provide Feedback on an Article', new_article_path %></p></strong>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
