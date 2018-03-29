@@ -12,12 +12,7 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'bcrypt','3.1.11'
 gem 'simple_calendar', '~> 2.2', '>= 2.2.7'
 # Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
