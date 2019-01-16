@@ -17,7 +17,7 @@ group :development do
 end
 
 group :production do 
-  gem 'pg'         #gem to use in production environment
+  gem 'pg', '~> 0.20'       #gem to use in production environment
   gem 'rails_12factor'
 end
 
